@@ -39,7 +39,7 @@ def makeWebhookResult(req):
 
     dun={'11':'11:02PM,11:15PM,11:25PM'}
    
-    speech = "The next trains from  " + station + " are at " + str(dun[11]) + " respectively."
+    speech = "The next trains from  " + station + " are at " + str(dun['11']) + " respectively."
 
     print("Response:")
     print(speech)
