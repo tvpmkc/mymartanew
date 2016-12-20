@@ -1,2 +1,2 @@
-# mymartanew
-hobby project
+#Hobby project
+#How to Provide Replies about mymarta schedules
