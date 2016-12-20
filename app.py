@@ -33,10 +33,10 @@ def makeWebhookResult(req):
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
-    direction = parameters.get("direction")
-    station= parameters.get("stations")
-    count=parameters.get("number")
-    print(station)
+    //direction = parameters.get("direction")
+    //station= parameters.get("stations")
+    //count=parameters.get("number")
+    //print(station)
     dun={'11':'11:02PM,11:15PM,11:25PM'}
    
     speech = "The next trains from  " + station + " are at " + str(dun['11']) + " respectively."
