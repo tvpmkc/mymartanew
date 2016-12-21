@@ -43,7 +43,7 @@ def makeWebhookResult(req):
     schedule=""
     if station.lower() == "dunwoody":
         if direction.lower() == "south":
-            schedule={'11':'11:02AM,11:15AM,11:25AM,11:40AM,11:55AM'}
+            schedule={'11':'11:02AM,11:15AM,11:25AM'}
             print(str(schedule[hours]))
         else:
             schedule={'23':'11:02PM,11:15PM,11:25PM'}
