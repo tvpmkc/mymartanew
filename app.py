@@ -40,7 +40,7 @@ def makeWebhookResult(req):
     #count=parameters.get("number")
     #print(station)
     hours,mins,secs=map(int,reqTime.split(':'))
-    
+    schedule=""
     if station.lower() == "dunwoody":
         if direction.lower() == "south":
             schedule={'11':'11:02AM,11:15AM,11:25AM,11:40AM,11:55AM','23':'11:02PM,11:15PM,11:25PM,11:40PM,11:55PM'}
