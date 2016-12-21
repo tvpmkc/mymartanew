@@ -39,19 +39,15 @@ def makeWebhookResult(req):
     period=parameters.get("period")
     #count=parameters.get("number")
     #print(station)
-    hours,mins,secs=map(int,reqtime.split(':'))
+    hours,mins,secs=map(int,reqTime.split(':'))
     
     if station == "dunwoody":
         if direction == "south":
-            schedule={'11':'11:02PM,11:15PM,11:25PM'}
+            schedule={'23':'11:02PM,11:15PM,11:25PM,11:40PM,11:55PM'}
         else:
-            schedule={'11':'11:02PM,11:15PM,11:25PM'}
+            schedule={'23':'11:02PM,11:15PM,11:25PM'}
     else:
         print "not dunwoody"
-    
-    
-        
-        
    
     speech = "The next trains from  " + station + " are at " + str(schedule[hours]) + " respectively."
 
