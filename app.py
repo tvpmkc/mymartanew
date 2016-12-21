@@ -3,7 +3,7 @@
 import urllib
 import json
 import os
-import datetime as dt
+
 
 from flask import Flask
 from flask import request
@@ -44,7 +44,7 @@ def makeWebhookResult(req):
     if station.lower() == "dunwoody":
         if direction.lower() == "south":
             schedule={'11':'11:02AM,11:15AM,11:25AM,11:40AM,11:55AM','23':'11:02PM,11:15PM,11:25PM,11:40PM,11:55PM'}
-            print(hours)
+            print(str(schedule[hours]))
         else:
             schedule={'23':'11:02PM,11:15PM,11:25PM'}
     else:
