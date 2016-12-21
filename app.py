@@ -3,7 +3,7 @@
 import urllib
 import json
 import os
-import datetime
+import datetime as dt
 
 from flask import Flask
 from flask import request
@@ -33,13 +33,27 @@ def makeWebhookResult(req):
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
-    #direction = parameters.get("direction")
+    direction = parameters.get("direction")
+    reqTime=parameters.get("time")
     station= parameters.get("stations")
+    period=parameters.get("period")
     #count=parameters.get("number")
     #print(station)
-    dun={'11':'11:02PM,11:15PM,11:25PM'}
+    hours,mins,secs=map(int,reqtime.split(':'))
+    
+    if station == "dunwoody":
+        if direction == "south":
+            schedule={'11':'11:02PM,11:15PM,11:25PM'}
+        else:
+            schedule={'11':'11:02PM,11:15PM,11:25PM'}
+    else:
+        print "not dunwoody"
+    
+    
+        
+        
    
-    speech = "The next trains from  " + station + " are at " + str(dun['11']) + " respectively."
+    speech = "The next trains from  " + station + " are at " + str(schedule[hours]) + " respectively."
 
     print("Response:")
     print(speech)
